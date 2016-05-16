@@ -1,10 +1,6 @@
-+------------------------+
-|       HOW TO USE       |
-+------------------------+ 
+### HOW TO USE
 
-+---------------------------------------------------+
-|       FORMAT FROM DATETIME OBJECT OR STRING       |
-+---------------------------------------------------+ 
+#### FORMAT FROM DATETIME OBJECT OR STRING
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -13,9 +9,7 @@
 		}
 	</script>
 
-+--------------------------------------------+
-|       FORMAT INCLUDING ERROR MESSAGE       |
-+--------------------------------------------+
+#### FORMAT INCLUDING ERROR MESSAGE
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -28,9 +22,7 @@
 		}
 	</script>
 
-+-----------------------------------------------+
-|       CONVERT STRING TO DATETIME OBJECT       |
-+-----------------------------------------------+ 
+#### CONVERT STRING TO DATETIME OBJECT 
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -45,12 +37,10 @@
 		}
 	</script>
 
-+------------------------+
-|       PARAMETERS       |
-+------------------------+ 
+#### PARAMETERS 
 
 Field        | Code   | Note
--------------+--------+--------------------------------------------
+-------------|--------|--------------------------------------------
 Year         | yyyy   | 4 digits
              | yy     | 2 digits
 Month        | MMMM   | Month name in full
@@ -77,7 +67,4 @@ AM/PM        | TT     | Am/Pm
              | tt     | am/pm
              | t      | a/p
 
-+------------------+
-|       NOTES      |
-+------------------+
-M and m are different
+**Note:** `M` and `m` are different
