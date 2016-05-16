@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My DateTime Formatter</title>
+
+    <script src="datetimeFormat.v1.1.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .label { float: left; width: 100px; }
+        .clear { clear: both; }
+        input[type="text"] { float: left; width: 250px; border: 1px solid #ccc; padding: 3px 4px; margin-bottom: 1px; }
+    </style>
+
+    <script type="text/javascript">
+		var df = new DatetimeFormatter();
+		var f = new Array("dd/MM/yyyy",
+						"dd/MMM/yyyy HH:mm",
+						"dd/MM/yy HH:mm:ss TT",
+						"MM/dd/yy HH:mm:ss.fff TT",
+						"dddd MMM, dd yyyy HH:mm:ss",
+						"dd MMMM yyyy",
+						"MMMM dd yyyy",
+						"dddd MMMM dd, yyyy HH:mm:ss",
+						"dd/MM/yyyy",												
+						"MM/dd/yyyy", 
+						"dd/MM/yyyy HH:mm:ss", 
+						"d/M/yy", 
+						"dddd MMM dd, yyyy HH:mm:ss TT", 
+						"MMM, dd yyyy", 
+						"M/d/yy HH:mm:ss.fff t", 
+						"dd MMM yyyy", 
+						"yyyy-MM-dd HH:mm:ss", 
+						"d/M/yy HH:mm",
+						"yyyy/MM/dd",
+						"ddd dd/MM/yy HH:mm tt",
+						"dd MM yy",
+						"d MMMM yy");
+		
+		function randomValues(){
+			var mydate = new Date();
+			mydate.setTime(mydate.getTime() * Math.random());
+			var i = Math.floor(Math.random() * 22);
+			try{
+				document.getElementById("txtDateStr").value = df.format(mydate.toString(), f[i]);
+				document.getElementById("txtFromFormat").value = f[i];
+			}catch(e){
+				alert(e.message);
+			}
+			document.getElementById("txtToFormat").value = f[Math.floor(Math.random() * 22)];
+		}
+		
+		function doFormat(){
+			var dateStr = document.getElementById("txtDateStr").value;
+			var fromFormat = document.getElementById("txtFromFormat").value;
+			var toFormat = document.getElementById("txtToFormat").value;
+			try{
+				document.getElementById("txtResult").value = df.format(dateStr, fromFormat, toFormat);
+			}catch(e){
+				alert(e);
+			}			
+		}
+    </script>
+
+</head>
+<body>
+    <div class="label">
+        Date String</div>
+    <input type="text" id="txtDateStr" />
+    <br class="clear" />
+    <div class="label">
+        From Format</div>
+    <input type="text" id="txtFromFormat" />
+    <br class="clear" />
+    <div class="label">
+        To Format</div>
+    <input type="text" id="txtToFormat" />
+    <input type="button" value="Randon" onclick="javascript:randomValues();" />
+    <br class="clear" />
+    <div class="label">
+        Result</div>
+    <input type="text" id="txtResult" />
+    <input type="button" value="Format" onclick="javascript:doFormat();" />
+    <br class="clear" />
+</body>
+</html>
