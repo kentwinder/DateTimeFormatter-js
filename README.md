@@ -1,6 +1,6 @@
-### HOW TO USE
+### How to use
 
-#### FORMAT FROM DATETIME OBJECT OR STRING
+##### Format from datetime object or string
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -9,7 +9,7 @@
 		}
 	</script>
 
-#### FORMAT INCLUDING ERROR MESSAGE
+##### Format including error message
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -22,7 +22,7 @@
 		}
 	</script>
 
-#### CONVERT STRING TO DATETIME OBJECT 
+##### Convert string to datetime object
 	<script type="text/javascript">
 		var df = new DatetimeFormatter();
 		function doTest() {
@@ -37,7 +37,7 @@
 		}
 	</script>
 
-#### PARAMETERS 
+##### Parameters 
 
 Field        | Code   | Note
 -------------|--------|--------------------------------------------
@@ -62,7 +62,7 @@ Second       | ss     | 2 digits - with leading zero
 Milisecond   | fff    | 3 digits
              | ff     | 2 digits
              | f      | 1 digit
-AM/PM        | TT     | Am/Pm
+AM/PM        | TT     | AM/PM
              | T      | A/P
              | tt     | am/pm
              | t      | a/p
